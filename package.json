@@ -1,0 +1,37 @@
+{
+    "name": "node-restacular",
+    "version": "0.1.0",
+    "description": "Node REST Service generator based on Express 4.x and jugglingdb.",
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository" : { 
+        "type" : "git", 
+        "url" : "https://github.com/civa86/node-restacular.git"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "rest",
+        "mongodb",
+        "mysql",
+        "jugglingdb"
+    ],
+    "dependencies": {
+        "request": "2.53.0",
+        "body-parser": "1.10.2",
+        "express": "4.11.1",
+        "express-handlebars": "1.1.0",
+        "jugglingdb": "0.3.0",
+        "grunt-jasmine-node-coverage": "0.3.2"
+    },
+    "devDependencies": {
+        "jugglingdb-mongodb": "0.0.4-4",
+        "jugglingdb-mysql": "0.0.10",
+        "mongoose": "3.8.23"
+    },
+    "author": "Dario Civallero <dario.civallero@gmail.com>",
+    "license": "MIT"
+}
+
