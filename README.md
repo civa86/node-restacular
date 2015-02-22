@@ -15,7 +15,7 @@ $ npm install node-restacular
 
 ## Database Adapter
 
-Choose your favourite database [adapter](http://jugglingdb.co/#ADAPTERS), for example [jugglingdb-mongodb](https://github.com/jugglingdb/mongodb-adapter)
+Choose your favorite database [adapter](http://jugglingdb.co/#ADAPTERS), for example [jugglingdb-mongodb](https://github.com/jugglingdb/mongodb-adapter)
 
 ```bash
 $ npm install jugglingdb-mongodb
@@ -26,7 +26,6 @@ $ npm install jugglingdb-mongodb
 *	Full configurable services
 *	Storage system supporting different database engines
 *	Auto generated CRUD operations
-*	Overridable built-in ORM
 *	ACL permissions for single routes/method
 
 ## Usage
@@ -36,14 +35,13 @@ var restacular = require('node-restacular'),
 	
     restConfiguration = {
         server: Object, 	// Optional. Docs in #Configuration section
-       	storage: Object, 	// Required. Docs in #Configuration section
+       	storage: Object,    // Required. Docs in #Configuration section
         model: Function,    // Required. Docs in #Model section
-        acl: Object, 		// Optional. Docs in #ACL section
-        ormService: Object // Optional. Docs in #ORM section
+        acl: Object		    // Optional. Docs in #ACL section
     };
     
     restacular.launchServer(restConfiguration, function() {
-        //Run additinal code if you need!
+        //Run additional code if you need!
     });
 ```
 
@@ -58,7 +56,7 @@ Set your `storage` configuration.<br>
 ```javascript
 	{
 		server: {
-			hostname: "localhost", 	// Defaul value
+			hostname: "localhost", 	// Default value
 			port: "3000", 			// Default value
 			apiPrefix: "api"		// Default value.   
 
@@ -127,8 +125,51 @@ DELETE        /:resource                  delete all
 
 ## Access Control List
 
-## ORM Override
-If you override the ORM you will choose what to inject in the function in the `defineModel` hook. You can inject your orm and your schema. (done function comes as argument for the hook)
+Routes access is public by default.<br>
+If you don't set any `acl` CRUD are exposed to everyone.
+
+With `acl` configuration you can choose access rules for any resource/method.<br>
+You can specify wildcard rules with char: `*`
+```javascript
+        ...
+
+        acl: {
+            "*": {
+                "GET": {
+                    "from-ip": "*" 
+                },
+                "POST": {
+                    "from-ip": "*"
+                },
+                "PUT": {
+                   "from-ip": "*"
+                },
+                "DELETE": {
+                    "from-ip": "*"
+                }
+            },
+            "resourceName": {
+                "GET": {
+                    "from-ip": ["127.0.0.1"] 
+                },
+                "POST": {
+                    "from-ip": ["127.0.0.1"]
+                },
+                "PUT": {
+                   "from-ip": "none"
+                },
+                "DELETE": {
+                    "from-ip": "none"
+                } 
+            }
+        }, 
+
+        ...
+
+```
+
+In the example above `resourceName` is enabled only from localhost for `GET` and `POST` methods, `PUT` and `DELETE` are disabled.<br>
+All other resources are public, following `*` rules.
 
 ## MIT License
 
