@@ -171,6 +171,11 @@ You can specify wildcard rules with char: `*`
 In the example above `resourceName` is enabled only from localhost for `GET` and `POST` methods, `PUT` and `DELETE` are disabled.<br>
 All other resources are public, following `*` rules.
 
+## Next Realeases
+
+*   Possibility to override jugglingdb default ORM. You can write your own!
+*   Template engine integration to build your own response (handlebars engine) 
+
 ## MIT License
 
 ```text
