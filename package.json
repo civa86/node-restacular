@@ -1,6 +1,6 @@
 {
     "name": "node-restacular",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Node REST Service generator based on Express 4.x and jugglingdb.",
     "main": "index.js",
     "scripts": {
@@ -27,7 +27,7 @@
         "jugglingdb-mongodb": "0.0.4-4",
         "jugglingdb-mysql": "0.0.10",
         "mongoose": "3.x",
-        "grunt-jasmine-node-coverage": "0.3.x",
+        "grunt-jasmine-node-coverage": "0.x",
         "request": "2.x"
     },
     "author": "Dario Civallero <dario.civallero@gmail.com>",
