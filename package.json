@@ -19,17 +19,17 @@
         "jugglingdb"
     ],
     "dependencies": {
-        "request": "2.53.0",
-        "body-parser": "1.10.2",
-        "express": "4.11.1",
-        "express-handlebars": "1.1.0",
-        "jugglingdb": "0.3.0",
-        "grunt-jasmine-node-coverage": "0.3.2"
+        "body-parser": "1.x",
+        "express": "4.x",
+        "express-handlebars": "1.x",
+        "jugglingdb": "0.3.x"
     },
     "devDependencies": {
         "jugglingdb-mongodb": "0.0.4-4",
         "jugglingdb-mysql": "0.0.10",
-        "mongoose": "3.8.23"
+        "mongoose": "3.x",
+        "grunt-jasmine-node-coverage": "0.3.x",
+        "request": "2.x"
     },
     "author": "Dario Civallero <dario.civallero@gmail.com>",
     "license": "MIT"
