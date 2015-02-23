@@ -173,6 +173,7 @@ All other resources are public, following `*` rules.
 
 ## Next Realeases
 
+*   CORS request setting
 *   Possibility to override jugglingdb default ORM. You can write your own!
 *   Template engine integration to build your own response (handlebars engine) 
 
