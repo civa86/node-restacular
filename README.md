@@ -1,4 +1,4 @@
-# Node RESTAcular
+# Node RESTacular
 
 Spectacular REST service generator<br>
 It's based on [node](http://nodejs.org), it exposes CRUD with [express](http://expressjs.com) and it comes with [jugglingdb](http://jugglingdb.co) ORM
