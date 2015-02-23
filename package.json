@@ -1,6 +1,6 @@
 {
     "name": "node-restacular",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Node REST Service generator based on Express 4.x and jugglingdb.",
     "main": "index.js",
     "scripts": {
