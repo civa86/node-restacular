@@ -3,6 +3,7 @@
 Spectacular REST service generator<br>
 It's based on [node](http://nodejs.org), it exposes CRUD with [express](http://expressjs.com) and it comes with [jugglingdb](http://jugglingdb.co) ORM
 
+[![Build Status](https://travis-ci.org/civa86/node-restacular.svg?branch=master)](https://travis-ci.org/civa86/node-restacular)
 [![npm version](https://badge.fury.io/js/node-restacular.svg)](http://badge.fury.io/js/node-restacular)
 [![Dependency Status](https://david-dm.org/civa86/node-restacular.svg)](https://david-dm.org/civa86/node-restacular)
 
