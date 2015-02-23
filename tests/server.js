@@ -1,5 +1,5 @@
 (function() {
-    var rest = require("../lib/rest"),
+    var rest = require("../lib/node-restacular"),
         restConfiguration;
 
     restConfiguration = {

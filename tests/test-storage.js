@@ -13,6 +13,6 @@ module.exports = {
         port: "27017",
         username: "",
         password: "",
-        database: "test-rest"
+        database: "test-restacular"
     }
 };

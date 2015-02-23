@@ -1,1 +1,1 @@
-module.exports = require('./lib/restacular');
+module.exports = require('./lib/node-restacular');
