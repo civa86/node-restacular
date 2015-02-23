@@ -146,7 +146,7 @@
             });
         });
         
-        it("post resource is empty again", function (done) {
+        it("post resource is empty again!", function (done) {
             var url = "http://localhost:" + restConfiguration.server.port + "/api/post";
             request(url, function (error, response, body) {
                 var res = JSON.parse(body);
