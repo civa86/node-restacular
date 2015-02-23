@@ -7,7 +7,7 @@ It's based on [node](http://nodejs.org), it exposes CRUD with [express](http://e
 [![npm version](https://badge.fury.io/js/node-restacular.svg)](http://badge.fury.io/js/node-restacular)
 [![Dependency Status](https://david-dm.org/civa86/node-restacular.svg)](https://david-dm.org/civa86/node-restacular)
 
-##Installation
+## Installation
 
 Install the npm package
 ```bash
