@@ -1,6 +1,6 @@
 module.exports = {
     development: {
-        driver: "mongodb",
+        driver: "sails-mongo",
         host: "localhost",
         port: "27017",
         username: "",

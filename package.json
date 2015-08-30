@@ -1,7 +1,7 @@
 {
     "name": "node-restacular",
-    "version": "0.2.2",
-    "description": "Node REST Service generator based on Express 4.x and jugglingdb.",
+    "version": "0.3.0",
+    "description": "Node REST Service generator based on Express 4.x and Waterline.",
     "main": "index.js",
     "scripts": {
         "test": "grunt test"
@@ -16,19 +16,17 @@
         "rest",
         "mongodb",
         "mysql",
-        "jugglingdb"
+        "waterline"
     ],
     "dependencies": {
         "body-parser": "1.x",
         "express": "4.x",
-        "jugglingdb": "0.3.x"
+        "waterline": "0.10.26"
     },
     "devDependencies": {
-        "jugglingdb-mongodb": "0.0.4-4",
-        "jugglingdb-mysql": "0.0.10",
-        "mongoose": "3.x",
-        "grunt-jasmine-node-coverage": "0.x",
-        "request": "2.x"
+        "grunt-jasmine-node-coverage": "0.4.1",
+        "request": "2.61.0",
+        "sails-mongo": "0.11.2"
     },
     "author": "Dario Civallero <dario.civallero@gmail.com>",
     "license": "MIT"
