@@ -131,6 +131,7 @@ If you don't set any `acl` CRUD are exposed to everyone.
 
 With `acl` configuration you can choose access rules for any resource/method.<br>
 You can specify wildcard rules with char: `*`
+
 ```javascript
         ...
 
