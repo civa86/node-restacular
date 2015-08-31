@@ -33,14 +33,14 @@ $ npm install jugglingdb-mongodb
 ```javascript
 var restacular = require('node-restacular'),
            		 restConfiguration;
-	
+
     restConfiguration = {
         server: Object, 	// Optional. Docs in #Configuration section
        	storage: Object,    // Required. Docs in #Configuration section
         model: Function,    // Required. Docs in #Model section
         acl: Object		    // Optional. Docs in #ACL section
     };
-    
+
     restacular.launchServer(restConfiguration, function() {
         //Run additional code if you need!
     });
@@ -48,7 +48,7 @@ var restacular = require('node-restacular'),
 
 ## Configuration
 
-Set your `server`  configuration.<br> 
+Set your `server`  configuration.<br>
 `server` settings are optional and default generated url is http://localhost:3000/api
 
 Set your `storage` configuration.<br>
@@ -59,11 +59,11 @@ Set your `storage` configuration.<br>
 		server: {
 			hostname: "localhost", 	// Default value
 			port: "3000", 			// Default value
-			apiPrefix: "api"		// Default value.   
+			apiPrefix: "api"		// Default value.
 
 		},
-		storage: { 
-			driver: "driver-adapter", 	//Example: mondodb. Driver name based on your db adapter. 
+		storage: {
+			driver: "driver-adapter", 	//Example: mondodb. Driver name based on your db adapter.
 	        host: "db-host",			//Example: localhost
 	        port: "db-port",			//Example 27017
 	        username: "db-user",		//Example root
@@ -98,12 +98,12 @@ This function is automatically called during router initialization process, imme
                 createdAt: Date
             });
             //Be sure to call done callback after model definition
-            done(); 
+            done();
         },
 
-        ... 
+        ...
     }
-``` 
+```
 Each resource define its schema: `orm.define("resourceName", {})`.<br>
 For jugglingdb Schema definition refer to the official [documentation](http://jugglingdb.co/schema.3.html).<br>
 `resourceName` will match CRUD generated routes. lowercase recommended.
@@ -113,15 +113,15 @@ For jugglingdb Schema definition refer to the official [documentation](http://ju
 After `model` definitions CRUD operations are automatically binded to router:
 
 ```
-method        route                       action 
+method        route                       action
 ------------------------------------------------------------
 GET           /:resource                  find all
 GET           /:resource/count            get count
-GET           /:resource/:id              find by id       
-POST          /:resource                  create new   
-PUT           /:resource/:id              update by id      
+GET           /:resource/:id              find by id
+POST          /:resource                  create new
+PUT           /:resource/:id              update by id
 DELETE        /:resource/:id              delete
-DELETE        /:resource                  delete all 
+DELETE        /:resource                  delete all
 ```
 
 ## Access Control List
@@ -138,7 +138,7 @@ You can specify wildcard rules with char: `*`
         acl: {
             "*": {
                 "GET": {
-                    "from-ip": "*" 
+                    "from-ip": "*"
                 },
                 "POST": {
                     "from-ip": "*"
@@ -152,7 +152,7 @@ You can specify wildcard rules with char: `*`
             },
             "resourceName": {
                 "GET": {
-                    "from-ip": ["127.0.0.1"] 
+                    "from-ip": ["127.0.0.1"]
                 },
                 "POST": {
                     "from-ip": ["127.0.0.1"]
@@ -162,9 +162,9 @@ You can specify wildcard rules with char: `*`
                 },
                 "DELETE": {
                     "from-ip": "none"
-                } 
+                }
             }
-        }, 
+        },
 
         ...
 
@@ -177,7 +177,7 @@ All other resources are public, following `*` rules.
 
 *   CORS request setting
 *   Possibility to override jugglingdb default ORM. You can write your own!
-*   Template engine integration to build your own response (handlebars engine) 
+*   Template engine integration to build your own response (handlebars engine)
 
 ## MIT License
 
@@ -202,5 +202,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
-
-

@@ -4,7 +4,9 @@ module.exports = function(grunt) {
         jasmine_node: {
             task_name: {
                 options: {
-                    coverage: false, //build coverage with instanbul
+                    coverage: {
+                        excludes: ["tests/**"]
+                    }, //build coverage with instanbul
                     showColors: true,
                     forceExit: true,
                     specFolders: ['tests/specs'],

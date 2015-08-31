@@ -73,6 +73,16 @@
             });
         });
 
+        it("count post is 1", function (done) {
+            var url = "http://localhost:" + restConfiguration.server.port + "/api/post/count";
+            request(url, function (error, response, body) {
+                var res = JSON.parse(body);
+                expect(res.code).toEqual(200);
+                expect(res.message).toEqual(1);
+                done();
+            });
+        });
+
         it("get post record", function (done) {
             var url = "http://localhost:" + restConfiguration.server.port + "/api/post/" + id;
             request(url, function (error, response, body) {
