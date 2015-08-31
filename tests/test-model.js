@@ -1,7 +1,7 @@
 module.exports = {
     post: {
-        name: 'string',
-        age: 'integer'
+        title: 'string',
+        description: 'text'
     }
 };
 

@@ -8,7 +8,7 @@ module.exports = {
         database: "test-rest"
     },
     test: {
-        driver: "mongodb",
+        driver: "sails-mongo",
         host: "localhost",
         port: "27017",
         username: "",
