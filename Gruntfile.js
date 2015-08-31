@@ -5,11 +5,11 @@ module.exports = function(grunt) {
             task_name: {
                 options: {
                     coverage: {
-                        excludes: ["tests/**"]
-                    }, //build coverage with instanbul
+                        excludes: ["lib/**/*.spec.js", "tests/**"]
+                    },
                     showColors: true,
                     forceExit: true,
-                    specFolders: ['tests/specs'],
+                    specFolders: ['lib'],
                     extensions: 'js',
                     specNameMatcher: 'spec',
                     captureExceptions: true,
