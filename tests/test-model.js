@@ -1,6 +1,9 @@
 module.exports = {
     post: {
-        title: 'string',
+        title: {
+            type: 'string',
+            required: true
+        },
         description: 'text'
     }
 };
