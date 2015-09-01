@@ -4,7 +4,17 @@ module.exports = {
             type: 'string',
             required: true
         },
-        description: 'text'
+        description: 'text',
+
+        behaviours: {
+            beforeCreate: function(values, next){
+                values.title = values.title + "_beforeCreate_executed";
+                next();
+            }
+        }
+    },
+    comment: {
+        text: 'text'
     }
 };
 

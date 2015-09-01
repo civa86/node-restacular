@@ -1,7 +1,8 @@
 # Node RESTacular
 
-Spectacular REST service generator<br>
-It's based on [node](http://nodejs.org), it exposes CRUD with [express](http://expressjs.com) and it comes with [jugglingdb](http://jugglingdb.co) ORM
+Spectacular REST service generator. 
+
+It works with all kind of database, simply download an adapter and run RESTacular! 
 
 [![Build Status](https://travis-ci.org/civa86/node-restacular.svg?branch=master)](https://travis-ci.org/civa86/node-restacular)
 [![npm version](https://badge.fury.io/js/node-restacular.svg)](http://badge.fury.io/js/node-restacular)
@@ -16,10 +17,10 @@ $ npm install node-restacular
 
 ## Database Adapter
 
-Choose your favorite database [adapter](http://jugglingdb.co/#ADAPTERS), for example [jugglingdb-mongodb](https://github.com/jugglingdb/mongodb-adapter)
+Choose your favorite [database adapter](https://github.com/balderdashy/waterline#community-adapters), for example [sails-mongodb](https://github.com/balderdashy/sails-mongo)
 
 ```bash
-$ npm install jugglingdb-mongodb
+$ npm install sails-mongo
 ```
 
 ## Features
@@ -105,7 +106,7 @@ This function is automatically called during router initialization process, imme
     }
 ```
 Each resource define its schema: `orm.define("resourceName", {})`.<br>
-For jugglingdb Schema definition refer to the official [documentation](http://jugglingdb.co/schema.3.html).<br>
+For waterline Schema definition refer to the official [documentation](https://github.com/balderdashy/waterline-docs).<br>
 `resourceName` will match CRUD generated routes. lowercase recommended.
 
 ## CRUD
@@ -176,7 +177,7 @@ All other resources are public, following `*` rules.
 ## Next Realeases
 
 *   CORS request setting
-*   Possibility to override jugglingdb default ORM. You can write your own!
+*   Override waterline ORM. Available: nedb, mongoose. Write your own!
 *   Template engine integration to build your own response (handlebars engine)
 
 ## MIT License
