@@ -64,7 +64,7 @@ Set your `storage` configuration.<br>
 
 		},
 		storage: {
-			driver: "driver-adapter", 	//Example: mondodb. Driver name based on your db adapter.
+			driver: "db-adapter", 	//Example: sails-mongo. Driver name based on your db adapter.
 	        host: "db-host",			//Example: localhost
 	        port: "db-port",			//Example 27017
 	        username: "db-user",		//Example root
@@ -78,6 +78,7 @@ Set your `storage` configuration.<br>
 ```
 
 ## Model
+
 
 Define your Model in a function. The function take three arguments:<br>
 `orm`: the Object that stores models.<br>
