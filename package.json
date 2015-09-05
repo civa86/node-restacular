@@ -4,7 +4,7 @@
     "description": "Node REST Service generator based on Express 4.x and Waterline.",
     "main": "index.js",
     "scripts": {
-        "test": "grunt test"
+      "test": "grunt test"
     },
     "repository" : { 
         "type" : "git", 
@@ -19,8 +19,8 @@
         "waterline"
     ],
     "dependencies": {
-        "body-parser": "1.x",
-        "express": "4.x",
+        "body-parser": "1.13.3",
+        "express": "4.13.3",
         "waterline": "0.10.26"
     },
     "devDependencies": {
