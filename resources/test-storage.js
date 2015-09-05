@@ -1,6 +1,6 @@
 module.exports = {
     development: {
-        driver: "mongodb",
+        adapter: require("sails-mongo"),
         host: "localhost",
         port: "27017",
         username: "",
@@ -8,7 +8,7 @@ module.exports = {
         database: "test-rest"
     },
     test: {
-        driver: "mongodb",
+        adapter: require("sails-mongo"),
         host: "localhost",
         port: "27017",
         username: "",
