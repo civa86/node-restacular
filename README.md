@@ -49,7 +49,7 @@ $ npm install sails-mongo
 
     restacular.launchServer(restConfiguration, function() {
         //Run additional code if you need!
-    });
+    }); 
 ```
 
 ## Server Configuration
